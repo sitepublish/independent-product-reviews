@@ -1219,6 +1219,80 @@
 }
 </script>
   
+
+  <style id="cloud-stack-footer-normalizer">
+    .site-footer .footer-links,
+    .site-footer .footer-links-list,
+    .site-footer .footer-nav-links,
+    .c-footer .c-footer-list,
+    .site-footer .cloud-stack-resource-links,
+    .c-footer .cloud-stack-resource-links {
+      columns: unset !important;
+      column-count: 1 !important;
+      column-gap: 0 !important;
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: .55rem 1.25rem !important;
+      max-width: 100%;
+      list-style: none !important;
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+    }
+    .site-footer .footer-links li,
+    .site-footer .footer-links-list li,
+    .site-footer .footer-nav-links li,
+    .c-footer .c-footer-list li,
+    .cloud-stack-resource-links li {
+      break-inside: avoid;
+      margin: 0 !important;
+      max-width: 100%;
+    }
+    .site-footer a,
+    .c-footer a {
+      color: rgba(255,255,255,.76) !important;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+      word-break: normal;
+      line-height: 1.65;
+    }
+    .site-footer a:hover,
+    .c-footer a:hover {
+      color: rgba(255,255,255,.98) !important;
+    }
+    .site-footer .footer-heading,
+    .site-footer .cloud-stack-resources-heading,
+    .c-footer .c-footer-heading,
+    .c-footer .cloud-stack-resources-heading {
+      color: rgba(255,255,255,.88) !important;
+    }
+    .site-footer .cloud-stack-resources,
+    .c-footer .cloud-stack-resources {
+      grid-column: 1 / -1;
+      width: 100%;
+      max-width: 100%;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+    .site-footer .cloud-stack-resources-heading,
+    .c-footer .cloud-stack-resources-heading {
+      margin: 0 0 1rem;
+      font-size: .75rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      opacity: .9;
+    }
+    @media (max-width: 720px) {
+      .site-footer .footer-links,
+      .site-footer .footer-links-list,
+      .site-footer .footer-nav-links,
+      .c-footer .c-footer-list,
+      .site-footer .cloud-stack-resource-links,
+      .c-footer .cloud-stack-resource-links {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -1483,14 +1557,14 @@
         </div>
       </div>
       <!-- cross-links-start -->
-        <div>
-          <div class="footer-heading" style="margin-top:1.5rem">Resources</div>
-          <ul class="footer-links" style="columns:3;column-gap:1.5rem;list-style:none;padding:0;margin:0">
-            <li><a href="http://independent-product-reviews.s3-website-us-east-1.amazonaws.com/" title="independent product reviews Review Site" style="color:inherit;text-decoration:none">independent product reviews Review Site</a></li>
-            <li><a href="https://storage.googleapis.com/independent-product-reviews/index.html" title="independent product reviews Review Hub" style="color:inherit;text-decoration:none">independent product reviews Review Hub</a></li>
-            <li><a href="https://reviewstorage01.z5.web.core.windows.net/" title="independent product reviews Product Reviews" style="color:inherit;text-decoration:none">independent product reviews Product Reviews</a></li>
-            <li><a href="https://pub-43bf5c5bbd5443e0960dd5b8f8e6e0ce.r2.dev/index.html" title="independent product reviews Comparisons" style="color:inherit;text-decoration:none">independent product reviews Comparisons</a></li>
-            <li><a href="https://independent-product-reviews.netlify.app/" title="independent product reviews Product Guide" style="color:inherit;text-decoration:none">independent product reviews Product Guide</a></li>
+        <div class="cloud-stack-resources">
+          <div class="cloud-stack-resources-heading">Resources</div>
+          <ul class="cloud-stack-resource-links">
+            <li><a href="http://independent-product-reviews.s3-website-us-east-1.amazonaws.com/" title="independent product reviews Comparisons" class="cloud-stack-resource-link">independent product reviews Comparisons</a></li>
+            <li><a href="https://storage.googleapis.com/independent-product-reviews/index.html" title="independent product reviews Tested Products" class="cloud-stack-resource-link">independent product reviews Tested Products</a></li>
+            <li><a href="https://reviewstorage01.z5.web.core.windows.net/independent-product-reviews-20260423-204307/" title="independent product reviews Review Hub" class="cloud-stack-resource-link">independent product reviews Review Hub</a></li>
+            <li><a href="https://pub-43bf5c5bbd5443e0960dd5b8f8e6e0ce.r2.dev/index.html" title="independent product reviews Review Site" class="cloud-stack-resource-link">independent product reviews Review Site</a></li>
+            <li><a href="https://independent-product-reviews.netlify.app/" title="independent product reviews Product Testing" class="cloud-stack-resource-link">independent product reviews Product Testing</a></li>
           </ul>
         </div>
         <!-- cross-links-end -->
